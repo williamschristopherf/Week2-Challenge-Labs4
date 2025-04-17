@@ -3,6 +3,7 @@
 bool continueProgram = true;
 char userChar;
 
+//While loop allows the program to take in more than one student and prompt the user to end the program at the end
 while (continueProgram)
 {
     Student student1 = new Student();
@@ -23,6 +24,7 @@ while (continueProgram)
     student1.CalculatePercent();
     student1.CalculateDivision();
 
+    //Using verbatum interpolated strings to format a large block of strings without writing code repeatedly.
     Console.WriteLine($"""
 
     Roll Number:                   {student1.RollNumber}
@@ -30,15 +32,15 @@ while (continueProgram)
     Marks in Physics:              {student1.PhysicsGrade}
     Marks in Chemistry:            {student1.ChemistryGrade}
     Marks in Computer Application: {student1.ComputerGrade}
-    Total marks:                   {student1.Total}
+    Total marks:                   {student1.Total}/300
     Percentage:                    {student1.Percent.ToString("P")}
     Division:                      {student1.Division}
 
     """);
 
     Console.WriteLine("Do you have another student to enter?");
-    Console.WriteLine("y for yes: n for no");
-    userChar = Convert.ToChar(Console.ReadLine());
+    Console.WriteLine("\"y\" for yes: \"n\" for no");
+    userChar = Convert.ToChar(Console.ReadLine().ToLower());
 
     if (userChar == 'n')
     {

@@ -11,6 +11,7 @@
         public double PhysicsGrade { get; set; }
         public double Total { get; set; }
 
+        //Separate methods for Calculate total ,percent, and division to control when they are set. 
         public double CalculateTotal()
         {
             return Total = PhysicsGrade + ChemistryGrade + ComputerGrade;
