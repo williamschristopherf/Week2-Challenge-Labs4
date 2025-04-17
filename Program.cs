@@ -20,8 +20,8 @@ while (continueProgram)
     Console.WriteLine("Computer grade: ");
     student1.ComputerGrade = Convert.ToDouble(Console.ReadLine());
 
-    student1.CalculateTotal();
-    student1.CalculatePercent();
+    student1.Total = student1.CalculateTotal(student1.PhysicsGrade, student1.ChemistryGrade, student1.ComputerGrade);
+    student1.Percent = student1.CalculatePercent(student1.Total);
     student1.CalculateDivision();
 
     //Using verbatum interpolated strings to format a large block of strings without writing code repeatedly.

@@ -12,14 +12,14 @@
         public double Total { get; set; }
 
         //Separate methods for Calculate total ,percent, and division to control when they are set. 
-        public double CalculateTotal()
+        public double CalculateTotal(double physicsGrade, double chemistryGrade, double computerGrade)
         {
-            return Total = PhysicsGrade + ChemistryGrade + ComputerGrade;
+            return physicsGrade + chemistryGrade + computerGrade;
         }
 
-        public double CalculatePercent()
+        public double CalculatePercent(double total)
         {
-            return Percent = Total / 300;
+            return total / 300;
         }
 
         public void CalculateDivision()
